@@ -1,13 +1,13 @@
 import express from 'express'
 
-import TripsController from '../controllers/activities.js'
+import ActivitiesController from '../controllers/activities.js'
 
 const router = express.Router()
 
-router.get('/', TripsController.getTrips)
-router.get('/:id', TripsController.getTrip)
-router.post('/', TripsController.createTrip)
-router.delete('/:id', TripsController.deleteTrip)
-router.patch('/:id', TripsController.updateTrip)
+router.get('/', ActivitiesController.getActivities)
+router.get('/:trip_id', ActivitiesController.getTripActivities)
+router.post('/:trip_id', ActivitiesController.createActivity)
+router.delete('/:id', ActivitiesController.deleteActivity)
+router.patch('/:id', ActivitiesController.updateActivityLikes)
 
 export default router
